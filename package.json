@@ -1,0 +1,23 @@
+{
+	"name": "solitary-bar-0d5f",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro build && wrangler pages dev",
+		"astro": "astro",
+		"deploy": "astro build && wrangler pages deploy",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^12.6.0",
+		"@tailwindcss/vite": "^4.1.11",
+		"astro": "^5.12.4",
+		"tailwindcss": "^4.1.11"
+	},
+	"devDependencies": {
+		"@types/node": "^24.1.0",
+		"wrangler": "^4.26.0"
+	}
+}
