@@ -2,7 +2,7 @@
 import "../../src/main.css";
 
 const { title } = Astro.props;
-import Header from "../components/Header.astro";
+import Header from "./../components/Header.astro";
 ---
 
 <html lang="en">
@@ -14,7 +14,7 @@ import Header from "../components/Header.astro";
 		<title>{title}</title>
 	</head>
 	<body class="">
-		<div class="container mx-auto max-w-2xl py-8 px-4 gap-8">
+		<div class="container mx-auto space-y-10 max-w-2xl py-8 px-4 gap-8">
 			<Header />
 			<slot />
 		</div>
