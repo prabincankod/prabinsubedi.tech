@@ -1,0 +1,27 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+const projects = [
+    {
+        title: "Easy Sewa",
+        description: "Making esewa payments easier.",
+        link: "https://easy-sewa.js.org",
+        image: "https://github.com/prabincankod.png",
+    },
+];
+---
+
+<section class="space-y-2">
+    <h2 class="font-medium">Projects</h2>
+
+    {
+        projects.map((project) => (
+            <ProjectCard
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                image={project.image}
+            />
+        ))
+    }
+</section>
