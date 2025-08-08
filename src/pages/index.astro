@@ -1,11 +1,12 @@
 ---
+import PostSection from "../components/PostSection.astro";
 import ProjectsSection from "../components/ProjectsSection.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Prabin Subedi">
 	<div id="about-me" class="gap-2 flex flex-col">
-		<h2 class="font-medium">About me</h2>
+		<h2 class="font-semibold">About me</h2>
 
 		<p class="font-normal tracking-wide">
 			Hiya, I'm Prabin Subedi, Full Stack Engineer Based in Nepal. Mostly
@@ -15,4 +16,5 @@ import MainLayout from "../layouts/MainLayout.astro";
 	</div>
 
 	<ProjectsSection />
+	<PostSection />
 </MainLayout>
