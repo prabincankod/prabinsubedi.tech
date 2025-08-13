@@ -1,0 +1,15 @@
+---
+import { MoveLeft } from "@lucide/astro";
+
+type Props = {
+    href: string;
+    title: string;
+};
+
+const { href, title } = Astro.props;
+---
+
+<a href={href} class="gap-2 inline-flex items-center">
+    <MoveLeft />
+    <span>{title}</span>
+</a>
