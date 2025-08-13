@@ -16,7 +16,23 @@ const { Content } = await render(post);
 ---
 
 <MainLayout title={post.data.title}>
-    <article class="prose prose-lg max-w-none">
+    <div>
+        <h1
+            class="text-foreground mb-2 text-3xl leading-tight font-bold tracking-tight"
+        >
+            {post.data.title}
+        </h1>
+        <div class="flex items-center gap-2 text-sm">
+            <span>
+                {post.data.date}
+            </span>
+            <span class="text-lg font-black"> · </span>
+            <span>
+                {Math.floor(post.body?.length! / 240)} mins read
+            </span>
+        </div>
+    </div>
+    <article class="prose max-w-none">
         <Content />
     </article>
 </MainLayout>
