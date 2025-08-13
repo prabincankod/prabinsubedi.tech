@@ -1,23 +1,23 @@
 ---
 import { ExternalLink } from "@lucide/astro";
+import { getCollection } from "astro:content";
+import PostCard from "./PostCard.astro";
+
+const allPosts = await getCollection("post");
 ---
 
 <section class="space-y-2">
     <h2 class="font-semibold">Posts</h2>
 
-    <div class="flex flex-row items-center justify-between group">
-        <div class="space-y-0">
-            <h2 class="font-xs opacity-80">
-                How to make your own esewa payments
-            </h2>
-            <p class="opacity-45">May 14, 2025</p>
-        </div>
-        <div class="open hidden group-hover:inline-flex">
-            <a
-                href="https://prabinsubedi.tech/posts/how-to-make-your-own-esewa-payments"
-            >
-                <ExternalLink />
-            </a>
-        </div>
-    </div>
+    {
+        allPosts.map((post) => {
+            return (
+                <PostCard
+                    title={post.data.title}
+                    slug={post.id}
+                    date={post.data.date}
+                />
+            );
+        })
+    }
 </section>

@@ -2,12 +2,17 @@
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
 import PostCard from "../../components/PostCard.astro";
+import GobackButton from "../../components/GobackButton.astro";
 
 const allPosts = await getCollection("post");
 ---
 
 <MainLayout title={" All posts"}>
-    <article class="prose prose">
+    <section class="space-y-4">
+        <GobackButton href="/" title="Go to home" />
+
+        <h2 class="font-bold text-2xl">Posts</h2>
+
         {
             allPosts.map((post) => {
                 return (
@@ -19,5 +24,5 @@ const allPosts = await getCollection("post");
                 );
             })
         }
-    </article>
+    </section>
 </MainLayout>

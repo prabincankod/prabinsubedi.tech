@@ -11,14 +11,18 @@ type Props = {
 const { title, date, slug } = Astro.props;
 ---
 
-<div class="flex flex-row items-center justify-between group">
-    <div class="space-y-0">
-        <h2 class="font-xs opacity-80">{title}</h2>
-        <p class="opacity-45">{date}</p>
+<a href={`/post/${slug}`}>
+    <div
+        class="flex flex-row items-center justify-between group hover:bg-gray-100 transition duration-300 ease-in-out rounded-lg -mx-2 -my-1 px-2 py-1"
+    >
+        <div class="space-y-0">
+            <h2 class="font-xs opacity-80">{title}</h2>
+            <p class="opacity-45">{date}</p>
+        </div>
+        <div
+            class="open hidden group-hover:block transition-all duration-300 delay-200 ease-in-out"
+        >
+            <ExternalLink size={16} />
+        </div>
     </div>
-    <div class="open hidden group-hover:inline-flex">
-        <a href={`/post/${slug}`}>
-            <ExternalLink />
-        </a>
-    </div>
-</div>
+</a>
