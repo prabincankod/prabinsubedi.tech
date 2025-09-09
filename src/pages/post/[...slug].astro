@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
+import GobackButton from "../../components/GobackButton.astro";
 
 export async function getStaticPaths() {
     const posts = await getCollection("post");
@@ -16,6 +17,7 @@ const { Content } = await render(post);
 ---
 
 <MainLayout title={post.data.title}>
+    <GobackButton href="/post" title="Go to Posts"  />
     <div>
         <h1
             class="text-foreground mb-2 text-3xl leading-tight font-bold tracking-tight"
