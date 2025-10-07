@@ -6,12 +6,16 @@ import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 
 
+import sitemap from '@astrojs/sitemap';
+
+
 export default defineConfig({
   vite: {
     plugins: [tailwindcss(),]
   },
 
-  integrations: [mdx()],
+  site: "https://prabinsubedi.tech",
+  integrations: [mdx(), sitemap()],
   output: 'static',
   adapter: cloudflare({
     platformProxy: {
