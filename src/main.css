@@ -2,7 +2,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-
+// hate the grind
 * {
   font-family: "DM Sans", sans-serif;
 
