@@ -14,7 +14,7 @@ export default defineConfig({
     plugins: [tailwindcss(),]
   },
 
-  site: "https://prabinsubedi.tech",
+  site: "https://prabin.is-a.dev",
   integrations: [mdx(), sitemap()],
   output: 'static',
   adapter: cloudflare({
