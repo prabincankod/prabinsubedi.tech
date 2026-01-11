@@ -1,7 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
-import cloudflare from '@astrojs/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 
@@ -17,12 +15,5 @@ export default defineConfig({
   site: "https://prabin.is-a.dev",
   integrations: [mdx(), sitemap()],
   output: 'static',
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true
-    },
 
-
-    imageService: "cloudflare"
-  })
 });
