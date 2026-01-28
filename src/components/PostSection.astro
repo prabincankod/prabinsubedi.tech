@@ -7,17 +7,20 @@ const allPosts = await getCollection("post");
 ---
 
 <section class="space-y-2">
-    <h2 class="font-semibold">Posts</h2>
+  <h2 class="font-semibold">Posts</h2>
 
-    {
-        allPosts.map((post) => {
-            return (
-                <PostCard
-                    title={post.data.title}
-                    slug={post.id}
-                    date={post.data.date}
-                />
-            );
-        })
-    }
+  {
+    allPosts
+      // just reverse it man
+      .reverse()
+      .map((post) => {
+        return (
+          <PostCard
+            title={post.data.title}
+            slug={post.id}
+            date={post.data.date}
+          />
+        );
+      })
+  }
 </section>

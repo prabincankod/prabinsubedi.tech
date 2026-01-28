@@ -8,21 +8,21 @@ const allPosts = await getCollection("post");
 ---
 
 <MainLayout title={" All posts"}>
-    <section class="space-y-4">
-        <GobackButton href="/" title="Go to home" />
+  <section class="space-y-4">
+    <GobackButton href="/" title="Go to home" />
 
-        <h2 class="font-bold text-2xl">Posts</h2>
+    <h2 class="font-bold text-2xl">Posts</h2>
 
-        {
-            allPosts.map((post) => {
-                return (
-                    <PostCard
-                        title={post.data.title}
-                        date={post.data.date}
-                        slug={post.id}
-                    />
-                );
-            })
-        }
-    </section>
+    {
+      allPosts.reverse().map((post) => {
+        return (
+          <PostCard
+            title={post.data.title}
+            date={post.data.date}
+            slug={post.id}
+          />
+        );
+      })
+    }
+  </section>
 </MainLayout>
