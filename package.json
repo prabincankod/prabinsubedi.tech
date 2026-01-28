@@ -16,7 +16,11 @@
 		"@astrojs/sitemap": "^3.6.0",
 		"@lucide/astro": "^0.539.0",
 		"@tailwindcss/vite": "^4.1.11",
+		"@vercel/og": "^0.8.6",
 		"astro": "^5.12.4",
+		"html2canvas": "^1.4.1",
+		"satori": "^0.19.1",
+		"sharp": "^0.34.5",
 		"tailwindcss": "^4.1.11"
 	},
 	"devDependencies": {
