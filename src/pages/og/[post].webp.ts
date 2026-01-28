@@ -119,7 +119,7 @@ export const GET: APIRoute = async ({ params }) => {
                                 color: "#000000",
                             },
                             children: [
-                                { type: "div", props: { children: "prabinsubedi.tech" } },
+                                { type: "div", props: { children: "prabin.is-a.dev" } },
                                 { type: "div", props: { children: new Date(date).toLocaleDateString("en-US") } },
                             ],
                         },
@@ -146,6 +146,7 @@ export const GET: APIRoute = async ({ params }) => {
         .webp()
         .toBuffer();
 
+    // @ts-ignore
     return new Response(pngBuffer, {
         headers: {
             "Content-Type": "image/webp",
